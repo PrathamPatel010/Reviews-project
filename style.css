@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat:wght@400;700&family=Ubuntu:wght@300&display=swap');
+
+/* Variables */
+
+:root {
+    --clr-primary-1: hsl(205, 78%, 60%);
+    --clr-heading: #0c4a6e;
+}
+
+body {
+    font-family: 'Ubuntu', 'Merriweather', serif, 'Montserrat';
+    margin: 0;
+    background-color: aliceblue;
+}
+
+main {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.title {
+    text-align: center;
+    margin: 4rem;
+}
+
+.heading {
+    color: var(--clr-heading);
+}
+
+.underline {
+    height: 0.25rem;
+    width: 5rem;
+    background: var(--clr-primary-1);
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5rem;
+}
+
+.img-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+}
+
+#author {
+    margin-bottom: 0.25rem;
+}
+
+#person-img {
+    width: 100%;
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    position: relative;
+}
+
+#job {
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    color: blue;
+    font-size: 0.85rem;
+}
+
+.review {
+    background-color: whitesmoke;
+    padding: 1.5rem 2rem;
+    text-align: center;
+}
