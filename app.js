@@ -40,9 +40,13 @@ const nextBtn = document.querySelector(".next-btn");
 // set the starting item
 let currentItem = 3;
 window.addEventListener('DOMContentLoaded', function() {
-    const item = reviews[currentItem];
+    showPerson(currentItem);
+});
+
+function showPerson(person) {
+    const item = reviews[person];
     img.src = item.img;
     author.textContent = item.name;
     job.textContent = item.job;
     info.textContent = item.text;
-});
+}
