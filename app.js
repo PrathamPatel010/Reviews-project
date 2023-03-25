@@ -36,17 +36,42 @@ const info = document.getElementById("info");
 
 const prevBtn = document.querySelector(".prev-btn");
 const nextBtn = document.querySelector(".next-btn");
+const randomBtn = document.querySelector(".random-btn");
+
 
 // set the starting item
 let currentItem = 3;
 window.addEventListener('DOMContentLoaded', function() {
-    showPerson(currentItem);
+    showPerson();
 });
 
-function showPerson(person) {
-    const item = reviews[person];
+function showPerson() {
+    const item = reviews[currentItem];
     img.src = item.img;
     author.textContent = item.name;
     job.textContent = item.job;
     info.textContent = item.text;
 }
+
+// adding event listeners
+prevBtn.addEventListener("click", function() {
+    currentItem--;
+    if (currentItem < 0) {
+        currentItem = reviews.length - 1;
+    }
+    showPerson();
+});
+
+nextBtn.addEventListener("click", function() {
+    currentItem++;
+    if (currentItem > reviews.length - 1) {
+        currentItem = 0;
+    }
+    showPerson();
+});
+
+randomBtn.addEventListener("click", function() {
+    currentItem = Math.floor(Math.random() * reviews.length);
+    console.log(currentItem);
+    showPerson();
+});
