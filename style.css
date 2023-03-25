@@ -90,6 +90,12 @@ main {
     max-width: var(--fixed-width);
 }
 
+.btns {
+    list-style: none;
+    margin: auto;
+    align-items: center;
+}
+
 .prev-btn,
 .next-btn {
     color: var(--clr-primary-7);
@@ -103,5 +109,17 @@ main {
 
 .prev-btn:hover,
 .next-btn:hover {
-    color: red;
+    color: lightskyblue;
+}
+
+.random-btn {
+    margin: 0.25rem;
+    border-radius: 0.5rem;
+    background: #ecfeff;
+    color: blue;
+    border-color: #ecfeff;
+}
+
+.random-btn:hover {
+    background: lightskyblue;
 }
