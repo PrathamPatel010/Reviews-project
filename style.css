@@ -3,14 +3,20 @@
 /* Variables */
 
 :root {
-    --clr-primary-1: hsl(205, 78%, 60%);
+    --clr-primary-1: #0e7490;
     --clr-heading: #0c4a6e;
+    --clr-grey: hsl(210, 36%, 96%);
+    --clr-white: #fff;
+    --fixed-width: 620px;
+    --light-shadow: 0 10px 8px rgb(0 0 0 / 0.04);
+    --dark-shadow: 0 25px 25px rgb(0 0 0 / 0.15);
 }
 
 body {
     font-family: 'Ubuntu', 'Merriweather', serif, 'Montserrat';
     margin: 0;
-    background-color: aliceblue;
+    background: var(--clr-grey);
+    background-color: #ecfeff;
 }
 
 main {
@@ -21,7 +27,7 @@ main {
 
 .title {
     text-align: center;
-    margin: 4rem;
+    margin: 5rem;
 }
 
 .heading {
@@ -32,8 +38,7 @@ main {
     height: 0.25rem;
     width: 5rem;
     background: var(--clr-primary-1);
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
     border-radius: 5rem;
 }
 
@@ -48,6 +53,20 @@ main {
 
 #author {
     margin-bottom: 0.25rem;
+}
+
+.review {
+    background-color: var(--clr-white);
+    box-shadow: var(--light-shadow);
+    border-radius: 1rem;
+    padding: 1rem 1rem;
+    margin: 5rem;
+    text-align: center;
+    object-fit: cover;
+}
+
+.review:hover {
+    box-shadow: var(--dark-shadow);
 }
 
 #person-img {
@@ -66,8 +85,23 @@ main {
     font-size: 0.85rem;
 }
 
-.review {
-    background-color: whitesmoke;
-    padding: 1.5rem 2rem;
-    text-align: center;
+.container {
+    width: 80vw;
+    max-width: var(--fixed-width);
+}
+
+.prev-btn,
+.next-btn {
+    color: var(--clr-primary-7);
+    font-size: 1.25rem;
+    background: transparent;
+    border-color: transparent;
+    margin: 0 0.5rem;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+    color: red;
 }
